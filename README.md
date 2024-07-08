@@ -1,5 +1,7 @@
 # linear-poa
 
+Visit the app @ [https://gcoulby.github.io/linear-poa-creator/](https://gcoulby.github.io/linear-poa-creator/)
+
 ## Project setup
 ```
 npm install
