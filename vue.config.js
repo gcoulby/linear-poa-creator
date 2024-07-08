@@ -7,6 +7,7 @@ const webpack = require('webpack')
 
 module.exports = {
   transpileDependencies: true,
+  publicPath: process.env.NODE_ENV === 'production' ? '/linear-poa-creator/' : '/',
 
   configureWebpack: {
     resolve: {
