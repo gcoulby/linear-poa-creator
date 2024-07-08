@@ -97,7 +97,7 @@ const computedIssueOutput = computed(() => {
   let issueOutput = `${messagePrefix.value} \n\n`
 
   selectedTags.value.forEach((tag, i) => {
-    issueOutput += `${i}. ${tag.name}\n `
+    issueOutput += `${i}. ${tag.name}\n`
     // const issue = getIssueByNumber(parseInt(tag.name.split('-')[1]))
     // issueOutput += `\t\t\t${issue?.url}\n`
   })
