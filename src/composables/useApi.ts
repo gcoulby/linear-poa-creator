@@ -30,7 +30,8 @@ export const useApi = () => {
     if (myIssues.nodes.length) {
       myIssues.nodes.map((issue) => {
         //add if not already in the list
-        if (!issues.value.find((i) => i.id === issue.id)) {
+
+        if (!issues.value.find((i) => i.id === issue.id && i.state?.then((state) => state.type !== 'completed'))) {
           issues.value.push(issue)
         }
       })
