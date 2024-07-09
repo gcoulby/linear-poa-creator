@@ -3,12 +3,12 @@
     <ApiFormVue />
     <h1 class="text-3xl">Plan of Action Creator</h1>
 
-    <div class="w-2/3 m-auto flex flex-col justify-center items-center">
+    <div class="sm:w-full md:w-2/3 m-auto flex flex-col justify-center items-center">
       <div class="mt-3 w-full flex flex-row justify-center items-center">
-        <p class="w-full bg-slate-800 border border-slate-500 rounded-md p-6 m-2">
+        <p class="w-full bg-slate-800 border border-slate-500 rounded-md p-6 m-2 text-xs">
           Hi <b>{{ user?.displayName }}</b
           >!<br />
-          To use the app, hover over the cog wheel above and enter your API key in the box above
+          To use the app, click the cog wheel above and enter your API key in the box above
           <br /><i>(this will be stored between sessions in your browser's local storage)</i>.<br /><br />
           Add a prefix in the next field, and use the issue selector to include the issues you want to include in the PoA.<br />
         </p>
@@ -41,7 +41,7 @@
       <div class="w-full flex flex-row justify-center items-center">
         <label for="issues" class="w-1/4">Output</label>
         <textarea
-          rows="6"
+          rows="4"
           class="w-3/4 border-2 border-slate-500 bg-slate-700 p-2 m-2"
           placeholder="Output"
           v-model="computedIssueOutput"
