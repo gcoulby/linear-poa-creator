@@ -15,11 +15,11 @@
       </div>
       <div class="w-full flex flex-row justify-center items-center">
         <label for="prefix" class="w-1/4">Prefix</label>
-        <input
+        <textarea
           type="text"
           class="w-3/4 border-2 border-slate-500 bg-slate-700 p-2 m-2"
           placeholder="Message Prefix"
-          v-model="messagePrefix" />
+          v-model="messagePrefix"></textarea>
       </div>
       <div class="w-full flex flex-row justify-center items-center">
         <label for="issues" class="w-1/4">Issues</label>
@@ -45,7 +45,7 @@
           class="w-3/4 border-2 border-slate-500 bg-slate-700 p-2 m-2"
           placeholder="Output"
           v-model="computedIssueOutput"
-          readonly />
+          readonly></textarea>
       </div>
       <button
         class="transition-all ease-in-out duration-300 text-white py-2 px-10 m-2 border border-slate-600"
@@ -97,7 +97,7 @@ const computedIssueOutput = computed(() => {
   let issueOutput = `${messagePrefix.value} \n\n`
 
   selectedTags.value.forEach((tag, i) => {
-    issueOutput += `${i}. ${tag.name}\n`
+    issueOutput += `•\t${tag.name}\n`
     // const issue = getIssueByNumber(parseInt(tag.name.split('-')[1]))
     // issueOutput += `\t\t\t${issue?.url}\n`
   })
