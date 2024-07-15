@@ -31,7 +31,9 @@ export const useApi = () => {
       myIssues.nodes.map((issue) => {
         //add if not already in the list
 
-        if (!issues.value.find((i) => i.id === issue.id && i.state?.then((state) => state.type !== 'completed'))) {
+        if (!issues.value.find((i) => i.id === issue.id)) {
+          if (issue.completedAt !== undefined || issue.archivedAt !== undefined || issue.canceledAt !== undefined) return
+          console.log('Adding issue', issue)
           issues.value.push(issue)
         }
       })
