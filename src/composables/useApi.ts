@@ -33,7 +33,6 @@ export const useApi = () => {
 
         if (!issues.value.find((i) => i.id === issue.id)) {
           if (issue.completedAt !== undefined || issue.archivedAt !== undefined || issue.canceledAt !== undefined) return
-          console.log('Adding issue', issue)
           issues.value.push(issue)
         }
       })
